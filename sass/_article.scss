@@ -1,0 +1,116 @@
+article {
+  width:100%;
+  float:left;
+  margin: 96px 0;
+  position:relative;
+  &:first-child {
+    margin-top:24px;
+  } 
+  p, ul, ol, dl, .quote .description {
+    font-size:16px;
+    line-height:1.5;
+    margin:1.5em 0;
+  }
+  ul, ol {
+    margin:1.5em;
+  }
+  ul li {
+    list-style-type:disc;
+  }
+  ol li {
+    list-style-type:decimal;
+  }
+  cite, em {
+    font-weight:300;
+    font-style:italic;
+  }
+  strong {
+    font-weight:bold;
+  }
+  small {
+    font-size:12px;
+    line-height:2;
+    font-weight:400;
+  }
+  q:before {
+    content:"\201c";
+  }
+  q q:before {
+    content:"\2018";
+  }
+  q:after {
+    content:"\201d";
+  }
+  q q:after {
+    content:"\2019";
+  }
+  .photo {
+    width:100%;
+    float:left;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size:16px;
+    line-height:1.5;
+    margin:1.5em 0;
+  }
+  .regular {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+    h1 {
+      font-size:24px;
+      line-height:1;
+      margin:1em 0;
+      border-bottom:1px solid #eee;
+    }
+  }
+  .photo {
+    .main {
+      width:100%;
+      margin:0 0 24px 0;
+      padding:0;
+      float:left;
+      a {
+        border:none;
+        margin:0;
+        padding:0;
+        display:block;
+        float:left;
+        width:100%;
+      }
+    }
+    .main-photo {
+      display: none;
+    }
+  }
+  .regular blockquote, .description blockquote {
+    margin:0 1.5em;
+    padding-left:0.5em;
+    position:relative;
+    font-weight:300;
+    border-left:2px solid #eee;
+  }
+
+  .regular blockquote p:first-child:before, .description blockquote p:first-child:before, .description blockquote p:first-child:before, .caption blockquote p:first-child:before, .audio blockquote p:first-child:before {
+    content:"\201c";
+    font-size:36px;
+    position:absolute;
+    top:-10px;
+    left:-20px;
+    color:#333;
+  }
+
+  .description {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .source {
+    p {
+      font-size: 14px;
+      font-style: italic;
+      margin: 1.71428571428571em 0;
+      color: #666;
+    }
+  }
+}

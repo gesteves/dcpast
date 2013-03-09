@@ -1,0 +1,42 @@
+.meta {
+  width: 100%;
+  max-width: 960px;
+  font-size: 12px;
+  line-height: 2;
+  margin: 0 auto;
+  font-weight: 400;
+  color: #999;
+  > div {
+    float: left;
+    &:before {
+      content: '•';
+      margin: 0 2px 0 5px;
+    }
+  }
+  .date {
+    margin-left: 0;
+    &:before {
+      display: none;
+    }
+  }
+  b {
+    color:#000;
+    font-weight:normal;
+  }
+  a[rel="tag"] {
+    margin-right:3px;
+    text-transform: lowercase;
+  }
+  a[rel="tag"]:before {
+    content:"#";
+    color:#999;
+  }
+  a:link, a:visited {
+    color:#000;
+    border-bottom:1px solid rgba(0,0,0,0);
+  }
+  a:hover, a:active {
+    color:#000;
+    border-bottom:1px solid rgba(0,0,0,1);
+  }
+}

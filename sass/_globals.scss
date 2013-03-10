@@ -30,40 +30,6 @@ img {
   max-width:100% !important;
 }
 
-nav.pagination {
-  width:100%;
-  max-width: 960px;
-  font-size:24px;
-  line-height:1;
-  margin: 0 auto;
-  ul {
-    width:100%;
-    float:left;
-    font-size:18px;
-    line-height:1;
-    margin-bottom: 48px;
-    li {
-      width:50%;
-      &.previous {
-        float:left;
-      }
-      &.next {
-        float:right;
-        text-align:right;
-      }
-    }
-  }
-  a:link, a:visited {
-    color:#000;
-    border:none;
-  }
-
-  a:hover, a:active {
-    color:$red;
-    border:none;
-  }
-}
-
 a {
   text-decoration:none;
   -webkit-transition:color 0.25s linear, border-color 0.25s linear;

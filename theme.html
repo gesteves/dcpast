@@ -151,46 +151,55 @@
   {/block:Posts}
   
   <nav class="pagination">
-  {block:Pagination}
-  <ul>
+    <p>
+      {block:Pagination}
+        {block:PreviousPage}
+        <a href="{PreviousPage}" rel="prev">&lsaquo; Previous</a>
+        {/block:PreviousPage}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}
+              <span>{PageNumber}</span>
+          {/block:CurrentPage}
 
-  {block:PreviousPage}
-  <li class="previous"><a href="{PreviousPage}" rel="prev">&lsaquo; Previous</a></li>
-  {/block:PreviousPage}
-
-  {block:NextPage}
-  <li class="next"><a href="{NextPage}" rel="next">Next &rsaquo;</a></li>   
-  {/block:NextPage}
-  </ul>
-  {/block:Pagination}
-
+          {block:JumpPage}
+              <a href="{URL}">{PageNumber}</a>
+          {/block:JumpPage}
+        {/block:JumpPagination}
+        {block:NextPage}
+        <a href="{NextPage}" rel="next">Next &rsaquo;</a> 
+        {/block:NextPage}
+      {/block:Pagination}
 
 
-  {block:DayPagination}
-  <ul>
 
-  {block:NextDayPage}
-  <li class="previous"><a href="{NextDayPage}" rel="prev">&lsaquo; Previous</a></li>
-  {/block:NextDayPage}
+      {block:DayPagination}
+        {block:NextDayPage}
+        <a href="{NextDayPage}" rel="prev">&lsaquo; Previous</a>
+        {/block:NextDayPage}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}
+              <span>{PageNumber}</span>
+          {/block:CurrentPage}
 
-  {block:PreviousDayPage}
-  <li class="next"><a href="{PreviousDayPage}" rel="next">Next &rsaquo;</a></li>
-  {/block:PreviousDayPage}
-  </ul>
-  {/block:DayPagination}
+          {block:JumpPage}
+              <a href="{URL}">{PageNumber}</a>
+          {/block:JumpPage}
+        {/block:JumpPagination}
+        {block:PreviousDayPage}
+        <a href="{PreviousDayPage}" rel="next">Next &rsaquo;</a>
+        {/block:PreviousDayPage}
+      {/block:DayPagination}
 
-  {block:PermalinkPagination}
-  <ul>
+      {block:PermalinkPagination}
+        {block:NextPost}
+        <a href="{NextPost}" rel="prev">&lsaquo; Previous</a>
+        {/block:NextPost}
 
-  {block:NextPost}
-  <li class="previous"><a href="{NextPost}" rel="prev">&lsaquo; Previous</a></li>
-  {/block:NextPost}
-
-  {block:PreviousPost}
-  <li class="next"><a href="{PreviousPost}" rel="next">Next &rsaquo;</a></li>
-  {/block:PreviousPost}
-  </ul>
-  {/block:PermalinkPagination}
+        {block:PreviousPost}
+        <a href="{PreviousPost}" rel="next">Next &rsaquo;</a>
+        {/block:PreviousPost}
+      {/block:PermalinkPagination}
+    </p>
   </nav>
   
 </section>

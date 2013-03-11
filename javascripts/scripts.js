@@ -28,7 +28,7 @@
     setUpLazyLoad : function () {
       var photo = $('img.main-photo');
       photo.show();
-      if ($window.width() > 500) {
+      if ($window.width() > 300) {
         photo.lazyload({
           threshold : 200
         });

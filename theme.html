@@ -190,13 +190,13 @@
       {/block:DayPagination}
 
       {block:PermalinkPagination}
-        {block:NextPost}
-        <a href="{NextPost}" rel="prev">&lsaquo; Previous</a>
-        {/block:NextPost}
-
         {block:PreviousPost}
-        <a href="{PreviousPost}" rel="next">Next &rsaquo;</a>
+        <a href="{PreviousPost}" rel="prev">&lsaquo; Previous</a>
         {/block:PreviousPost}
+
+        {block:NextPost}
+        <a href="{NextPost}" rel="next">Next &rsaquo;</a>
+        {/block:NextPost}
       {/block:PermalinkPagination}
     </p>
   </nav>

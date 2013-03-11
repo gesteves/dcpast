@@ -4,6 +4,7 @@ nav.pagination {
   p {
     font-size: 24px;
     margin: 1em auto;
+    line-height: 1.5;
     max-width: 960px;
     text-align: center;
     span {
@@ -11,6 +12,11 @@ nav.pagination {
     }
     a {
       margin: 0 10px; 
+    }
+    @include max-width($x-small) {
+      font-size: 16px;
+      margin: 1.5em 0;
+      line-height: 1.5;
     }
   }
   a:link, a:visited {

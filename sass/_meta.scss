@@ -6,17 +6,20 @@
   margin: 0 auto;
   font-weight: 400;
   color: #999;
-  > div {
+  .date {
+    margin-left: 0;
+  }
+  .tags {
     float: left;
     &:before {
       content: '•';
       margin: 0 2px 0 5px;
     }
-  }
-  .date {
-    margin-left: 0;
-    &:before {
-      display: none;
+    @include max-width($x-small) {
+      clear: both;
+      &:before {
+        display: none;
+      }
     }
   }
   b {

@@ -119,4 +119,7 @@ article {
       color: #666;
     }
   }
+  @include max-width($x-small) {
+    margin: 24px 0;
+  }
 }

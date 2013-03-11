@@ -38,7 +38,6 @@
 <script src="http://dcpast.s3.amazonaws.com/javascripts/html5.js"></script>
 <![endif]-->
 <link href="http://dcpast.s3.amazonaws.com/stylesheets/styles.css" media="all" rel="stylesheet" type="text/css" />
-<link href="http://dcpast.s3.amazonaws.com/webfonts/ss-social.css" rel="stylesheet" />
 <script type="text/javascript" src="http://use.typekit.com/ccj1fup.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -46,7 +45,7 @@
 <div class="wrap">
 <header>
   <h1><a href="/">{title}</a></h1>
-  <p><a href="/about">About</a> &bull; <a href="/archive" rel="archives">Archive</a> &bull; <a href="/random">Random</a> &bull; <a href="{RSS}">RSS</a> &bull; <a href="mailto:contact@dcpast.com">Contact</a>  &bull; <a href="http://twitter.com/dcpast">Twitter</a></p>
+  <p><a href="/about">About</a> &bull; <a href="/archive" rel="archives">Archive</a> &bull; <a href="/random">Random</a> &bull; <a href="{RSS}">RSS</a> &bull; <a href="mailto:contact@dcpast.com">Contact</a></p>
 </header>
 <section id="main-content">
   {block:NoSearchResults}
@@ -137,10 +136,9 @@
       {/block:HasTags}
 
       <ul class="share">
-        <li><a class="ss-icon" href="https://twitter.com/share?url={URLEncodedPermalink}&amp;via=dcpast&amp;related=gesteves&amp;text=" title="Share on Twitter" target="_blank" data-network="Twitter" data-action="Tweet" data-target="{Permalink}">&#xF611;</a></li>
-        <li><a class="ss-icon" href="https://www.facebook.com/sharer/sharer.php?u={URLEncodedPermalink}" title="Share on Facebook" target="_blank" data-network="Facebook" data-action="Share" data-target="{Permalink}">&#xF610;</a></li>
-        <li><a class="ss-icon" href="https://plus.google.com/share?url={URLEncodedPermalink}" title="Share on Google+" target="_blank" data-network="Google+" data-action="Share" data-target="{Permalink}">&#xF613;</a></li>
-        <li><a class="ss-icon" href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={URLEncodedPhotoURL-500}&description=" title="Share on Pinterest" target="_blank" data-action="Pin" data-network="Pinterest" data-target="{Permalink}">&#xF650;</a></li>
+        <li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="{Permalink}" data-via="dcpast" data-related="gesteves">Tweet</a></li>
+        <li class="plusone"><div class="g-plusone" data-size="medium" data-annotation="none" data-href="{Permalink}"></div></li>
+        <li class="like"><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></li>
       </ul>
     </div>
     
@@ -204,39 +202,31 @@
   
 </section>
 
+<footer>
+  <div class="container">
+    <div class="about">
+      <h1>About</h1>
+      <p>Founded in March 2013, D.C. Past aims to curate the photographic history of Washington, D.C., by collecting 19th and 20th century photographs from diverse sources such as the Library of Congress and the National Archives.</p>
+    </div>
+    <div class="follow">
+      <h1>Follow us</h1>
+      <ul> 
+        <li class="twitter"><a href="https://twitter.com/dcpast" class="twitter-follow-button" data-show-count="false">Follow @dcpast</a></li>
+        <li class="facebook"><div class="fb-like" data-href="http://facebook.com/dcpast" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></li>
+        <li class="googleplus"><div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://dcpast.com"></div></li>
+      </ul>
+    </div>
+  </div>
+  
+</footer>
+
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://dcpast.s3.amazonaws.com/javascripts/jquery.lazyload.min.js"></script>
 <script src="http://dcpast.s3.amazonaws.com/javascripts/scripts.js"></script>
 
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '513682d0613f5d0a1c000032');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-250261-35']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+<div id="fb-root"></div>
 
 </body>
 </html>

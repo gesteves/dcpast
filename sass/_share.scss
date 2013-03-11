@@ -8,17 +8,9 @@
     float: left;
     margin: 0 10px 0 0;
   }
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-    border: none !important;
-  }
-  a:link, a:visited {
-    color: #999;
-  }
-  a:hover, a:active {
-    color: $red;
+  .like {
+    position: relative;
+    top: -5px;
   }
   @include max-width('850px') {
     float: left;

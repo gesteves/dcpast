@@ -4,7 +4,7 @@
 
   methods = {
     init : function () {
-      _dc.setUpSocialSharing();
+      _dc.setUpTweetText();
       _dc.setUpLazyLoad();
       _dc.hideDefaultTags();
       _dc.initFacebook();
@@ -15,14 +15,14 @@
   };
 
   _dc = {
-    setUpSocialSharing : function () {
+    setUpTweetText : function () {
       $('article').each(function () {
         var article = $(this),
             description = article.find('.description');
-            caption = description.find('.caption p').first().text(),
-            short_caption = caption.length > 100 ? encodeURIComponent(caption.substring(0, 80) + '…') : encodeURIComponent(caption),
+            caption = description.find('.caption p').first().text();
+            caption = caption.length > 100 ? caption.substring(0, 80) + '…' : caption
             tweet = article.find('.twitter-share-button');
-            tweet.attr('data-text', short_caption);
+            tweet.attr('data-text', caption);
       });
     },
     setUpLazyLoad : function () {

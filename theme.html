@@ -22,7 +22,7 @@
 <link rel="canonical" href="{Permalink}">
 <meta property="og:url" content="{Permalink}" />
 <meta property="og:type" content="Article" />
-<title>{block:PostSummary}{PostSummary} &ndash; {/block:PostSummary}{title}</title>
+<title>{block:PostSummary}{block:Date}{PostSummary} &ndash; {/block:Date}{/block:PostSummary}{title}</title>
 {/block:Permalink}
 {/block:Posts}
 
@@ -30,7 +30,7 @@
 {block:TagPage}<title>Posts tagged &#8220;{Tag}&#8221; &ndash; {title}</title>{/block:TagPage}
 {block:SearchPage}<title>Search results for &#8220;{SearchQuery}&#8221; &ndash; {title}</title>{/block:SearchPage}
 {block:IndexPage}<meta name="description" content="{DescriptionPlainText}" />
-<title>{title}</title>
+<title>{title}{block:PreviousPage} &ndash; Page {CurrentPage}{/block:PreviousPage}</title>
 {/block:IndexPage}
 <meta property="og:site_name" content="{title}" />
 <meta property="og:locale" content="en_US" />

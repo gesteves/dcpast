@@ -41,6 +41,7 @@
 <link href="http://dcpast.s3.amazonaws.com/stylesheets/styles.css" media="all" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://use.typekit.com/ccj1fup.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<meta name="if:Show follow bar" content="0"/>
 </head>
 <body>
 <div class="wrap">
@@ -142,6 +143,22 @@
         <li class="like"><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></li>
       </ul>
     </div>
+
+    {block:Permalink}
+      {block:IfShowFollowBar}
+        <div class="follow-bar">
+          <div class="container">
+            <p>Don’t miss any photos, follow <strong>D.C. Past</strong> <span>on Facebook <abbr title="and">&amp;</abbr> Twiter</span></p>
+            <div class="twitter">
+              <a href="https://twitter.com/dcpast" class="twitter-follow-button" data-show-count="true">Follow @dcpast</a>
+            </div>
+            <div class="facebook">
+              <div class="fb-like" data-href="http://facebook.com/dcpast" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+            </div>
+          </div>
+        </div>
+      {/block:IfShowFollowBar}
+    {/block:Permalink}
     
     {/block:Date}
   

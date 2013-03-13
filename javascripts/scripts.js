@@ -37,7 +37,7 @@
     hideDefaultTags : function () {
       $('a[rel=tag]').each(function() {
         var tag = $(this);
-        var tags = /(washington dc|dc|district of columbia|^washington$)/gi;
+        var tags = /(washington dc|dc|district of columbia|^washington$|vintage|history)/gi;
         if (tag.text().match(tags)) {
           tag.remove();
         }

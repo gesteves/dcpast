@@ -8,9 +8,9 @@ nav.pagination {
     max-width: 960px;
     text-align: center;
     span {
-      color: #666;
+      color: #999;
     }
-    a {
+    a, span {
       margin: 0 10px; 
     }
     @media (max-width: $x-small) {

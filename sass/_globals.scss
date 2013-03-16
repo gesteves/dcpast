@@ -30,6 +30,11 @@ img {
   max-width:100% !important;
 }
 
+strong {
+  font-weight: bold;
+  font-style: normal;
+}
+
 a {
   text-decoration:none;
   -webkit-transition:color 0.25s linear, border-color 0.25s linear;

@@ -1,5 +1,5 @@
 html {
-  font-family: $warnock;
+  font-family: $kepler;
   font-weight:300;
   font-size:62.5%;
   color:#333;
@@ -13,7 +13,7 @@ html {
 
 span.amp, abbr[title=and] {
   font-style:italic;
-  font-family:"Baskerville", "Goudy Old Style", Constantia, serif;
+  font-family:"Baskerville", $garamond, serif;
   font-weight:normal;
 }
 

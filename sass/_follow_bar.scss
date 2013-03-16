@@ -27,10 +27,10 @@
     top: 15px;
     right: 210px;
   }
-  @include max-width($x-small) {
+  @media (max-width: $medium) {
     display: none;
   }
-  @include max-width($large) {
+  @media (max-width: $large) {
     span {
       display: none;
     }

@@ -1,24 +1,36 @@
 header {
   width:100%;
-  float:left;
-  margin:0;
+  max-width: 960px;
+  margin: 44px auto 24px auto;
   text-align: center;
+  font-family: $garamond;
+  border-bottom: 2px solid $red;
+  padding-bottom: 45px;
   h1 {
     font-weight:300;
-    font-size:36px;
+    font-size:48px;
+    letter-spacing: 2px;
     line-height:1;
-    margin:1em 0 0 0;
+    margin:0;
     width:100%;
     float:left;
-    @include max-width($x-small) {
+    text-transform: uppercase;
+    @media (max-width: $x-small) {
       font-size: 24px;
       margin-top: 2em;
     }
   }
+  h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+    color: #333;
+  }
   p {
     font-weight:300;
-    font-size:12px;
-    line-height:2;
+    font-size:16px;
+    line-height:1.5;
     margin: 0;
     width: 100%;
     float: left;

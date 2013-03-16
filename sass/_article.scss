@@ -113,13 +113,10 @@ article {
 
   .source {
     p {
-      font-size: 14px;
-      font-style: italic;
-      margin: 1.71428571428571em 0;
       color: #666;
     }
   }
-  @include max-width($x-small) {
+  @media (max-width: $x-small) {
     margin: 24px 0;
   }
 }

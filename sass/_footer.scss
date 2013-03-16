@@ -12,7 +12,7 @@ footer {
     float: left;
     width: 66.6666666667%;
     margin-right: 2.0833333333%;
-    @include max-width($small) {
+    @media (max-width: $small) {
       width: 100%;
       margin: 0;
     }
@@ -38,7 +38,7 @@ footer {
         height: 20px;
       }
     }
-    @include max-width($small) {
+    @media (max-width: $small) {
       width: 100%;
       margin: 0;
       float: left;

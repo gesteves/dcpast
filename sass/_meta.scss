@@ -1,8 +1,8 @@
 .meta {
   width: 100%;
   max-width: 960px;
-  font-size: 12px;
-  line-height: 2;
+  font-size: 14px;
+  line-height: 1.7142857143;
   margin: 0 auto;
   font-weight: 400;
   color: #999;
@@ -16,7 +16,7 @@
       content: '•';
       margin: 0 2px 0 5px;
     }
-    @include max-width($x-small) {
+    @media (max-width: $x-small) {
       clear: both;
       &:before {
         display: none;

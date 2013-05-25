@@ -114,17 +114,6 @@
       return;
     },
     initAnalytics : function () {
-      window._gauges = window._gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '513682d0613f5d0a1c000032');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
 
       window._gaq = window._gaq || [];
       window._gaq.push(['_setAccount', 'UA-250261-35']);

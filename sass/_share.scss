@@ -8,13 +8,20 @@
     float: left;
     margin: 0 10px 0 0;
   }
-  .like {
-    position: relative;
-    top: -1px;
-    @media (max-width: $x-small) {
-      top: 0;
+  .reblog, .like {
+    @include border-radius(2px);
+    @include background-image(linear-gradient(#fefefe, #dedede));
+    border: 1px solid #cfcfcf;
+    height: 18px;
+    padding: 0 4px;
+
+    &:hover {
+      @include background-image(linear-gradient(#f7f7f7, #d8d8d8));
     }
+
+    a { border: none; }
   }
+  
   @media (max-width: $medium) {
     float: left;
     width: 100%;

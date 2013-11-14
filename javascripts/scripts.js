@@ -56,10 +56,12 @@
         FB.Event.subscribe('edge.create', function(targetUrl) {
           window._gaq = window._gaq || [];
           window._gaq.push(['_trackSocial', 'Facebook', 'Like', targetUrl]);
+          window._gaq.push(['_trackEvent', 'Social', 'Facebook : Like', targetUrl]);
         });
         FB.Event.subscribe('edge.remove', function(targetUrl) {
           window._gaq = window._gaq || [];
-          window._gaq.push(['_trackSocial', 'Facebook', 'Like', targetUrl]);
+          window._gaq.push(['_trackSocial', 'Facebook', 'Unlike', targetUrl]);
+          window._gaq.push(['_trackEvent', 'Social', 'Facebook : Unlike', targetUrl]);
         });
 
       };
@@ -88,10 +90,12 @@
                 url = _dc.extractParamFromUri(event.target.src, 'url');
           }
           window._gaq.push(['_trackSocial', 'Twitter', 'Tweet', url]);
+          window._gaq.push(['_trackEvent', 'Social', 'Twitter : Tweet', url]);
         });
         twttr.events.bind('follow', function(event) {
           window._gaq = window._gaq || [];
           window._gaq.push(['_trackSocial', 'Twitter', 'Follow', '@' + event.data.screen_name]);
+          window._gaq.push(['_trackEvent', 'Social', 'Twitter : Follow', '@' + event.data.screen_name]);
         });
       });
     },
@@ -117,6 +121,7 @@
 
       window._gaq = window._gaq || [];
       window._gaq.push(['_setAccount', 'UA-250261-35']);
+      window._gaq.push(['_setSiteSpeedSampleRate', 100]);
       window._gaq.push(['_trackPageview']);
 
       (function() {
@@ -142,3 +147,12 @@
   });
 
 })(jQuery);
+
+trackGooglePlus = function (json) {
+  _gaq = _gaq || [];
+  if (json.state === 'on') {
+    _gaq.push(['_trackEvent', 'Social' , 'Google : +1', json.href]);
+  } else {
+    _gaq.push(['_trackEvent', 'Social' , 'Google : -1', json.href]);
+  }
+}

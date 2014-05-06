@@ -169,56 +169,58 @@
   {/block:Posts}
   
   <nav class="pagination">
-    <p>
-      {block:Pagination}
-        {block:PreviousPage}
-        <a href="{PreviousPage}" rel="prev">&lsaquo; Previous</a>
-        {/block:PreviousPage}
-        {block:JumpPagination length="5"}
-          {block:CurrentPage}
-              <span>{PageNumber}</span>
-          {/block:CurrentPage}
+      <p>
+        {block:Pagination}
+          {block:PreviousPage}
+          <a href="{PreviousPage}" rel="next">&lsaquo; Next</a>
+          {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+            {block:CurrentPage}
+                <span>{PageNumber}</span>
+            {/block:CurrentPage}
 
-          {block:JumpPage}
-              <a href="{URL}">{PageNumber}</a>
-          {/block:JumpPage}
-        {/block:JumpPagination}
-        {block:NextPage}
-        <a href="{NextPage}" rel="next">Next &rsaquo;</a> 
-        {/block:NextPage}
-      {/block:Pagination}
+            {block:JumpPage}
+                <a href="{URL}">{PageNumber}</a>
+            {/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}
+          <a href="{NextPage}" rel="prev">Previous &rsaquo;</a> 
+          {/block:NextPage}
+        {/block:Pagination}
 
+        {block:PermalinkPagination}
+          {block:NextPost}
+          <a href="{NextPost}" rel="next">&lsaquo; Next</a>
+          {/block:NextPost}
 
+          {block:PreviousPost}
+          <a href="{PreviousPost}" rel="prev">Previous &rsaquo;</a>
+          {/block:PreviousPost}
+        {/block:PermalinkPagination}
+      </p>
+    </nav>
 
-      {block:DayPagination}
-        {block:NextDayPage}
-        <a href="{NextDayPage}" rel="prev">&lsaquo; Previous</a>
-        {/block:NextDayPage}
-        {block:JumpPagination length="5"}
-          {block:CurrentPage}
-              <span>{PageNumber}</span>
-          {/block:CurrentPage}
-
-          {block:JumpPage}
-              <a href="{URL}">{PageNumber}</a>
-          {/block:JumpPage}
-        {/block:JumpPagination}
-        {block:PreviousDayPage}
-        <a href="{PreviousDayPage}" rel="next">Next &rsaquo;</a>
-        {/block:PreviousDayPage}
-      {/block:DayPagination}
-
-      {block:PermalinkPagination}
-        {block:PreviousPost}
-        <a href="{PreviousPost}" rel="prev">&lsaquo; Previous</a>
-        {/block:PreviousPost}
-
-        {block:NextPost}
-        <a href="{NextPost}" rel="next">Next &rsaquo;</a>
-        {/block:NextPost}
-      {/block:PermalinkPagination}
-    </p>
-  </nav>
+  {block:PermalinkPage}
+  <div class="more-photos"></div>
+  <script type="text/html" id="photo-template">
+    
+    <h2>Recent Photos You Might Enjoy</h2>
+    <div class="photos">
+      <% _.each(photos, function (photo, key, list) {
+         var photo_url = photo.photos[0].alt_sizes[3].url;
+      %>
+        <div class="photo">
+          <a href="<%= photo.post_url %>">
+          <div class="caption">
+            <p><%= photo.caption %></p>
+          </div>
+          <img src="<%= photo_url %>" alt="<%= photo.caption %>" />
+          </a>
+        </div>
+      <% }); %>
+    </div>
+  </script>
+  {/block:PermalinkPage}
   
 </section>
 

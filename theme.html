@@ -45,6 +45,7 @@
 <script type="text/javascript" src="//use.typekit.net/dyo6cyj.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <meta name="if:Show follow bar" content="0"/>
+<meta name="if:Show Adsense" content="1"/>
 </head>
 <body>
 <div class="wrap">
@@ -164,6 +165,19 @@
           </div>
         </div>
       {/block:IfShowFollowBar}
+      {block:IfShowAdsense}
+      <div class="leaderboard">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- DC Past Responsive Ad -->
+          <ins class="adsbygoogle dc-past-responsive-ad"
+               style="display:inline-block"
+               data-ad-client="ca-pub-6384133423736330"
+               data-ad-slot="5737169701"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+      </div>
+      {/block:IfShowAdsense}
     {/block:Permalink}
     
     {/block:Date}

@@ -47,7 +47,7 @@
 <meta name="if:Show follow bar" content="0"/>
 <meta name="if:Show Adsense" content="1"/>
 </head>
-<body>
+<body {block:PermalinkPage}class="permalink"{/block:PermalinkPage}>
 <div class="wrap">
 <header>
   <h1><a href="/">{title}</a></h1>
@@ -76,7 +76,7 @@
     <article itemscope itemtype="http://schema.org/Photograph">
     <div class="photo">
     <div class="main">
-    <a href="{Permalink}"><img data-original="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" src="{PhotoURL-500}" alt="{PhotoAlt}" itemprop="image" class="main-photo" /></a>
+    <a href="{Permalink}"><img data-original="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" src="{PhotoURL-500}" alt="{PhotoAlt}" class="main-photo" /></a>
     <noscript><a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" itemprop="image" /></a></noscript>
     </div>
     <div class="description">
@@ -85,7 +85,7 @@
     </div>
     {block:ContentSource}
       <div class="source">
-        <p><span>Source:</span> <a href="{SourceURL}">{SourceTitle}</a></p>
+        <p><span>Source:</span> <a href="{SourceURL}" class="long">{SourceURL}</a> <a href="{SourceURL}" class="short">{SourceTitle}</a></p>
       </div>
     {/block:ContentSource}
     </div>
@@ -105,11 +105,6 @@
     <div class="caption" itemprop="description">
       <p>{Caption}</p>
     </div>
-    {block:ContentSource}
-      <div class="source">
-        <p><span>Source:</span> <a href="{SourceURL}">{SourceTitle}</a></p>
-      </div>
-    {/block:ContentSource}
     </div>
     
     </div>
@@ -119,6 +114,11 @@
     <div class="caption" itemprop="description">
       {Caption}
     </div>
+        {block:ContentSource}
+      <div class="source">
+        <p><span>Source:</span> <a href="{SourceURL}" class="long">{SourceURL}</a> <a href="{SourceURL}" class="short">{SourceTitle}</a></p>
+      </div>
+    {/block:ContentSource}
     </div>
     {/block:Photoset}
     
@@ -147,7 +147,7 @@
         <li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="{Permalink}" data-via="dcpast" data-related="gesteves">Tweet</a></li>
         <li class="pinterest"><a href="//www.pinterest.com/pin/create/button/?url={Permalink}&media={PhotoURL-HighRes}&description=" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></li>
         <li class="plusone"><div class="g-plusone" data-size="medium" data-annotation="none" data-href="{Permalink}" data-callback="trackGooglePlus"></div></li>
-        <li class="fb-like"><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></li>
+        <li class="fb-like"><div class="fb-like" data-href="{Permalink}" data-share="true" data-layout="button_count" data-width="90" data-show-faces="false"></div></li>
       </ul>
     </div>
 

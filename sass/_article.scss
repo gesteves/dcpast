@@ -6,6 +6,9 @@ article {
   &:first-child {
     margin-top:24px;
   } 
+  .permalink & {
+    margin-bottom: 0;
+  }
   p, ul, ol, dl, .quote .description {
     font-size:16px;
     line-height:1.5;
@@ -116,6 +119,13 @@ article {
     p {
       color: #666;
       font-style: italic;
+    }
+    .short {
+      display: none;
+    }
+    @media (max-width: $x-small) {
+      .long { display: none; }
+      .short { display: inline; }
     }
   }
   @media (max-width: $x-small) {

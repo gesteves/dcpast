@@ -7,6 +7,8 @@
     display: inline;
     float: left;
     margin: 0 10px 0 0;
+
+    a { border: none !important; }
   }
   .reblog, .like {
     @include border-radius(2px);
@@ -26,5 +28,8 @@
     float: left;
     width: 100%;
     margin-top: 4px;
+  }
+  @media (max-width: $small) {
+    display: none;
   }
 }

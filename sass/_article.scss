@@ -1,7 +1,7 @@
 article {
   width:100%;
   float:left;
-  margin: 96px 0;
+  margin: 24px 0;
   position:relative;
   &:first-child {
     margin-top:24px;
@@ -120,15 +120,18 @@ article {
       color: #666;
       font-style: italic;
     }
-    .short {
+    .long {
       display: none;
     }
-    @media (max-width: $x-small) {
-      .long { display: none; }
-      .short { display: inline; }
+    .short {
+      display: inline;
+    }
+    @media (min-width: $x-small) {
+      .long { display: inline; }
+      .short { display: none; }
     }
   }
-  @media (max-width: $x-small) {
-    margin: 24px 0;
+  @media (min-width: $x-small) {
+    margin: 96px 0;
   }
 }

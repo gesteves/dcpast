@@ -12,14 +12,13 @@
   }
   .tags {
     float: left;
-    &:before {
-      content: '•';
-      margin: 0 2px 0 5px;
-    }
-    @media (max-width: $x-small) {
-      clear: both;
+    clear: both;
+  
+    @media (min-width: $x-small) {
+      clear: none;
       &:before {
-        display: none;
+        content: '•';
+        margin: 0 2px 0 5px;
       }
     }
   }

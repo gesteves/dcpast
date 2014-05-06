@@ -2,6 +2,10 @@
   float: left;
   width: 100%;
   margin: 24px 0;
+  display: none;
+  span {
+    display: none;
+  }
   .container {
     margin: 0 auto;
     width: 100%;
@@ -27,12 +31,12 @@
     top: 15px;
     right: 210px;
   }
-  @media (max-width: $medium) {
-    display: none;
+  @media (min-width: $medium) {
+    display: block;
   }
-  @media (max-width: $large) {
+  @media (min-width: $large) {
     span {
-      display: none;
+      display: inline;
     }
   }
 }

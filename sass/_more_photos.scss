@@ -13,14 +13,14 @@
 	}
 
 	.photos {
-		@include columns(4, 3%, 22%);
+		@include columns(2, 3%, 47%);
 
-		@media (max-width: $small) {
+		@media (min-width: $small) {
     	@include columns(3, 3%, 30%);
     }
 
-		@media (max-width: $x-small) {
-    	@include columns(2, 3%, 47%);
+		@media (min-width: $medium) {
+    	@include columns(4, 3%, 22%);
     }
 
 	}

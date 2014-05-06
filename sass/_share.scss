@@ -1,8 +1,9 @@
 .share {
   display: block;
-  float: right;
   margin: -5px 0 0 0;
   list-style-type: none;
+  display: none;
+
   li {
     display: inline;
     float: left;
@@ -23,13 +24,16 @@
 
     a { border: none; }
   }
-  
-  @media (max-width: $medium) {
+  @media (min-width: $small) {
+    display: block;
+  }
+  @media (min-width: $medium) {
     float: left;
     width: 100%;
     margin-top: 4px;
   }
-  @media (max-width: $small) {
-    display: none;
+  @media (min-width: $large) {
+    width: auto;
+    float: right;
   }
 }

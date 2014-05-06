@@ -10,17 +10,18 @@ footer {
   }
   .about {
     float: left;
-    width: 66.6666666667%;
-    margin-right: 2.0833333333%;
-    @media (max-width: $small) {
-      width: 100%;
-      margin: 0;
+    width: 100%;
+    margin: 0;
+
+    @media (min-width: $small) {
+      width: 66.6666666667%;
+      margin-right: 2.0833333333%;  
     }
   }
   .follow {
-    float: right;
-    margin-left: 2.0833333333%;
-    width: 29.1666666667%;
+    width: 100%;
+    margin: 0;
+    float: left;
     li {
       margin-bottom: 4px;
     }
@@ -38,13 +39,10 @@ footer {
         height: 20px;
       }
     }
-    @media (max-width: $small) {
-      width: 100%;
-      margin: 0;
-      float: left;
-      h1 {
-        margin-top: 0;
-      }
+    @media (min-width: $small) {
+      float: right;
+      margin-left: 2.0833333333%;
+      width: 29.1666666667%;
     }
   }
   p {

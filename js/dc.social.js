@@ -5,7 +5,7 @@ var DC = DC || {};
 
 DC.Social = (function ($) {
 	var opts = {
-		articles : $('articles')
+		articles : $('article')
 	};
 
 	var setUpTweetText = function () {
